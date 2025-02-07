@@ -4,17 +4,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --port=3000",
+    "start": "lite-server",
     "build": "echo 'Build script'"
   },
+  "lite-server": {
+  "server": {
+    "baseDir": "./",
+    "middleware": {
+      "1": "connect-history-api-fallback"
+    }
+  }
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "eslint": "^9.19.0",
-    "globals": "^15.14.0",
+    "lite-server": "^2.6.1",
     "live-server": "^1.2.2"
   }
 }

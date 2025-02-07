@@ -1,10 +1,7 @@
 // Configuracion inicial 
+import { initRouter } from './router.js';  // Asegúrate de que la ruta sea correcta
 
-import { initRouter } from "./utils/router.js"
-
-const initApp = ()=>{
+// Inicializa el enrutador cuando el contenido de la página esté listo
+document.addEventListener('DOMContentLoaded', () =>{
     initRouter();
-    console.log('Aplic inicializada');
-}
-
-document.addEventListener('DOMContentLoaded', initApp);
+});
