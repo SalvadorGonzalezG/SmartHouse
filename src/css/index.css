@@ -8,7 +8,7 @@ body{
     margin-bottom: 40px;
 }
 footer{
-    background-color: black;
+    background-color: rgb(53, 103, 229);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -122,4 +122,8 @@ p {
   h1 {
     font-size:24px;
   }
+}
+.img-header{
+    height: 60px;
+    width: 60px;
 }
