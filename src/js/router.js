@@ -3,6 +3,7 @@ import { HomePage } from "../pages/HomePage.js";
 import { AboutPage } from "../pages/AboutPage.js";
 import { NotFoundPage } from "../pages/NotFoundPage.js";
 import { Login } from "../pages/Login.js";
+import { Register } from "../pages/Register.js";
 let currentPage = null;
 
 export const initRouter = () =>{
@@ -12,7 +13,8 @@ export const initRouter = () =>{
     const routes = {
         '/': HomePage,
         '/about': AboutPage,
-        '/login': Login
+        '/login': Login,
+        '/register': Register
 
     };
 
