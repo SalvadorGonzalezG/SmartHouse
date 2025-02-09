@@ -40,7 +40,7 @@ export const Login = () => {
 		</button>
 	</div>
 	<p class="signup">Don't have an account?
-		<a rel="noopener noreferrer" href="#" class="">Sign up</a>
+		<a rel="noopener noreferrer" href="/register" class="">Sign up</a>
 	</p>
 </div>
 <div>   
