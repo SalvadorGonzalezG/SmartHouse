@@ -2,6 +2,12 @@ html{
     min-height: 100%;
     position: relative;
 }
+@media screen and (max-width: 480px) {
+    html {
+      min-height: 100%;
+      position:absolute;
+    }
+  }
 
 body{
     margin: 0;
@@ -39,7 +45,7 @@ p {
 
 .header {
   position:relative;
-  text-align:center;
+  text-align:end;
   background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
   color:white;
 }
@@ -52,17 +58,51 @@ p {
 }
 
 .inner-header {
-  height:15vh;
+  height:11vh;
   width:100%;
   margin: 0;
-  padding: 0;
+  padding: 0, 20px; /*Añadiendo espacio a los bordes*/
+  display: flex;
+  justify-content: space-between; /*Separamos izquiera y derecha*/
+  align-items: center;
+  background-color: linear-gradient(60deg, rgba(84,58,183,1) 0% rgba(0, 172,193,1) 100%);
+  color: white;
 }
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-section{
+    display: flex;
+    gap: 15px; /*Espacio entre enlaces*/
+}
+
+.search-input{
+    padding: 6px ;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    margin-top: 28px;
+    margin-right: -5px;
+}
+
+.search-btn{
+    padding: 7px 5px;
+    border: none;
+    background-color: #543ab7;
+    color: white;
+    cursor: pointer;
+    /* border-radius: 0 5px 5px 0; */
+    margin-top: 29px;
+    border-radius: 11px;/*Bordes redondeados a la derecha*/
+    margin-left: 0;
+    
+}
+.search-btn:hover{
+    background-color: #3b2a91;
 }
 
 .waves {
@@ -113,17 +153,26 @@ p {
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height:100%;
+    min-height:100%;
   }
   .content {
-    height:30vh;
+    height:100vh;
   }
   h1 {
     font-size:24px;
   }
 }
 .img-header{
+    margin-left: 31px !important;
     height: 60px;
     width: 60px;
+}
+a{
+    text-decoration: none !important;
+    color: white;
+    font-weight: bold;
+}
+a:hover{
+    color: #ffeb3b;
 }
