@@ -174,26 +174,6 @@ a:hover{
     color: #ffeb3b;
 }
 
-@media screen and (max-width: 480px) {
-    body, html {
-      min-height: 100%;
-      margin: 0;
-    }
-    #dynamic-content{
-        height: 100%;
-    }
-    .main-content{
-        flex-grow: 0;
-        padding: 20px;
-    }
-    footer{
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: auto;
-    }
-  }
   .img-login{
     height: 37px;
     width: 37px;
@@ -216,4 +196,74 @@ a:hover{
     color: #543ab7;
     cursor: pointer;
     transform: scale(1.05); /* Hcemos ligeramente más grande al hacer el hover*/
+  }
+
+  @media screen and (max-width: 480px) {
+    body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+    }
+    #dynamic-content{
+        flex: 1;
+        padding: 20px;
+    }
+    footer{
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .inner-header{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .left-section{
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 0;
+        margin-top: 13px;
+    }
+    .right-section{
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .img-header {
+         margin-left: 0 !important; 
+        height: 60px;
+        width: 60px;
+    }
+    .search-input{
+        width: 80%;
+        margin: 10px 0;
+    }
+    .search-btn{
+        width: 50%;
+        margin: 5px 0;
+    }
+
+    .img-header,
+    .img-login{
+        width: 50px;
+        height: 50px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
+
+  }
+  a{
+    position: relative; /*Permite que el z-index funcion e*/
+    z-index: 999; /*Para que este por encima de las olas en movim*/
+    display: inline-block; /* mejora para clicks*/
   }
