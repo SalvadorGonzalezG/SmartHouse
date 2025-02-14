@@ -1,4 +1,3 @@
-s
 export const Register = () =>{ 
     return `
 <div class = "container-register">

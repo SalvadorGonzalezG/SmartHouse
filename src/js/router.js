@@ -20,11 +20,16 @@ export const initRouter = () =>{
 
     // renderizamos la pagina segun la ruta
     const renderPage = (path) =>{
-        const pageComponent = routes[path] || NotFoundPage;
+        try {
+            const pageComponent = routes[path] || NotFoundPage;
 
         // limpiamos solo el contenido dinamico y mostramos la nueva pagina ("componete")
         currentPage = pageComponent();
         contentContainer.innerHTML = MainLayout(currentPage);
+        } catch (error) {
+            console.error(`Error al renderizar page: ${error.message}`, error);
+            contentContainer.innerHTML = MainLayout(NotFoundPage());
+        }
     }
 
     const navigate = (path) =>{
