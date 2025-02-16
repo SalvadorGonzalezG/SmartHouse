@@ -13,7 +13,7 @@ export const HomePage = () => {
     <section class="home-page">
         <h1>Welcomo to HomePage</h1>
         <!--Lista Vacia donde se Realizara la insercion de homs-->
-        <ul id="homs-list"></ul>
+        <div id="homs-list"></div>
     </section>`
 
 // insertamos el contenido en el cuaropo del documento
@@ -30,21 +30,27 @@ export const HomePage = () => {
     })
     .then(data => {
         const homsList = document.getElementById('homs-list');
+        
         homsList.innerHTML = ''; //Limpiamos el contenido previo
         
         // Iteramos sobre los datos recibidos y creamos los elementos de la lista
         data.forEach(home => {
             // Creamos in elemento <li> por cada home
-            const listItem = document.createElement('li');
+            const homeItem = document.createElement('div');
+            homeItem.className = 'home-item'; // clase para los estilos
 
             // Usamos innerHtml para insertar texto y la img
-            listItem.innerHTML = `
-                ${home.title} - ${home.price}
-                <img src="${home.image}" alt="${home.title}"
-                  style = "width: 100px; margin-left: 10px;" />
+            homeItem.innerHTML = `
+            <div class="home-image"> 
+                <img src="${home.image}" alt="${home.title}"/>
+            </div>
+            <div class="home-info">
+                <h3>${home.title}</h3>
+                 <p>${home.price}</p>
+            </div>
                 `;
             // Agregamos el elemento a la lista
-            homsList.appendChild(listItem)
+            homsList.appendChild(homeItem)
         })
     })
     .catch(error => {

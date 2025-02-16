@@ -256,6 +256,7 @@ a:hover{
     }
     h1{
         font-size: 20px;
+        margin: 0;
     }
     p{
         font-size: 12px;
