@@ -34,4 +34,28 @@
     margin: 0;
 }
 
+.btn-cardContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.btn-imgHeart{
+    border: none;
+    background-color: white;
+    color: none;
+}
+.imgAddToCart{
+    width: 15px;
+    height: 15px;
+}
+.btn-moreInfo{
+    text-align: center;
+    border: none;
+    color: none;
+}
+.moreInfo{
+    width: 25px;
+    height: 25px;
+}
+
 

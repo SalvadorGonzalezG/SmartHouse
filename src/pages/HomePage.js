@@ -48,8 +48,10 @@ export const HomePage = () => {
                 <h3>${home.title}</h3>
                  <p>${home.price}</p>
             </div>
-            <button class="btn">add To Car</button>
-            button class="btn"><img src="../"/> </button>
+            <div class="btn-cardContainer">
+            <button class="btn-moreInfo"><img class="moreInfo" src="/src/assets/plus.png" /></button>
+            <button class="btn-imgHeart"><img class="imgAddToCart" src="/src/assets/heart.png"/> </button>
+            </div>
                 `;
             // Agregamos el elemento a la lista
             homsList.appendChild(homeItem)
