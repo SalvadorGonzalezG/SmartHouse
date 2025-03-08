@@ -8,14 +8,14 @@
     "build": "echo 'Build script'"
   },
   "lite-server": {
-  "server": {
-    "baseDir": "./",
-    "middleware": {
-      "1": "connect-history-api-fallback"
-    },
-    "port": 3001
-  }
-},
+    "server": {
+      "baseDir": "./",
+      "middleware": {
+        "1": "connect-history-api-fallback"
+      },
+      "port": 3001
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
